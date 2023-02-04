@@ -108,6 +108,13 @@ Es posible visualizar metricas tanto a nivel usuario en sesion(Logueado) como to
 * Histograma y boxplot de NDGC.
 * A nivel usuario se puede visualizar los usuarios mar cercanos, junto con su nivel de similitud con el usuario actual. Nota: El usuario actual tiene similitud 1 con sigo mismo.
 
+**Notas**
+
+1. El filtro soporta pasar una lista de tags separados por comas. Ademas, se puede buscar items quw no contenga un tag con el operador se negación (**-**).
+2. Ver la vista de detalle de un item.
+3. Navegar una lista de items resulado de una buqeuda o
+
+
 
 
 <p align="center">
@@ -115,14 +122,7 @@ Es posible visualizar metricas tanto a nivel usuario en sesion(Logueado) como to
 </p>
 
 **Notas**
-1. 
-2. Por defecto la calificacion es cero.
-
-
-**Notas**
-
-1. El filtro soporta pasar una lista de tags separados por comas. Ademas, se puede buscar items quw no contenga un tag con el operador se negación (**-**).
-2. Ver la vista de detalle de un item.
-3. Navegar una lista de items resulado de una buqeuda o
+1. Sección de metricas para el usuario en session(Logueado).
+2. Sección de metricas generales.
 
 
