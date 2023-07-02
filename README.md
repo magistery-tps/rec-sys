@@ -24,6 +24,21 @@ Para mas detalle ver la [WIKI](https://github.com/magistery-tps/rec-sys/wiki) de
 </p>
 
 
+## Primeros Pasos y explicación de modelos
+
+<p align="center">
+    <a href="http://www.youtube.com/watch?v=zh78fp9g3BI" target="_tab"/>
+    <img src="http://img.youtube.com/vi/zh78fp9g3BI/0.jpg" 
+        title="RecSys: Primeros Pasos" 
+        alt="RecSys: Primeros Pasos"/>
+    </a>
+</p>
+
+
+
+
+
+
 ## Probar RecSys
 
 Ir a  [recsys.sytes.net](http://recsys.sytes.net)
