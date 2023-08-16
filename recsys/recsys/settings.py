@@ -235,6 +235,10 @@ LOGGING = {
 		'colored': {
 			'()': 'colorlog.ColoredFormatter',
 			'format': "%(log_color)s%(levelname)-8s%(reset)s %(blue)s%(message)s"
+		},
+  		'verbose': {
+			'format': "[{asctime}|{levelname}|{name}]: {message}",
+             "style": "{",
 		}
 	},
 
@@ -243,7 +247,8 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'recsys.log'
+            'filename': 'recsys.log',
+            'formatter': 'verbose'
         },
         'console': {
             'class': 'logging.StreamHandler',
@@ -255,13 +260,17 @@ LOGGING = {
     # Define the loggers
     'loggers': {
         'django.db.backends': {
-            'level': 'DEBUG',
-            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'handlers': ['file', 'console']
         },
         '': {
             'handlers': ['file', 'console'],
             'level': 'INFO',
-            'propagate,': True,
+            'propagate': True
+        },
+        'django': {
+            'handlers': ['file', 'console'],
+            'propagate': True
         }
     },
 }
