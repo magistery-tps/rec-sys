@@ -31,7 +31,7 @@ Para mas detalle ver la [WIKI](https://github.com/magistery-tps/rec-sys/wiki) de
 
 ## Probar RecSys
 
-Ir a  [recsys.sytes.net](http://recsys.sytes.net)
+Ir a  [recsys](http://recsys.ddns.net:8000/)
 
 ## Screenshots
 
