@@ -11,8 +11,8 @@ class SimilarityMatrixCell(models.Model):
         on_delete  = models.DO_NOTHING,
         unique     = False
     )
-    value   = models.FloatField()
-    version = models.IntegerField(default=0)
+    value       = models.FloatField(verbose_name = 'Value')
+    version     = models.IntegerField(default=0, verbose_name = 'Version')
 
     class Meta:
         indexes = [
