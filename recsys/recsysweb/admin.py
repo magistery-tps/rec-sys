@@ -73,7 +73,7 @@ class RecommenderAdmin(admin.ModelAdmin):
 
 @admin.register(Interaction)
 class InteractionAdmin(admin.ModelAdmin):
-    list_display = ['user', 'item', 'rating']
+    list_display = ['user', 'item', 'rating', 'created_at']
 
 
 @admin.register(Item)
