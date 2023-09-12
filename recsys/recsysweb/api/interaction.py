@@ -11,7 +11,7 @@ from rest_framework.response import Response
 class InteractionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model        = Interaction
-        fields       = ['user', 'item', 'suitable_to_train', 'rating']
+        fields       = ['user', 'item', 'suitable_to_train', 'rating', 'created_at']
         lookup_field = 'interaction'
 
 
