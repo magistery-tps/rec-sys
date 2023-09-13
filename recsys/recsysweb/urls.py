@@ -8,6 +8,8 @@ from .api import    (
                         SimilarityMatrixCellViewSet,
                         UserViewSet,
                         RecommenderViewSet,
+                        RecommenderUserPredictionsView,
+                        RecommenderItemPredictionsView
                     )
 
 
@@ -26,8 +28,8 @@ urlpatterns = [
     path('sign-in',  views.sign_in,  name='sign-in' ),
     path('sign-out', views.sign_out, name='sign-out'),
 
-    path('recommendations', views.recommendations, name='recommendations'),
-    path('likes',           views.likes,           name='likes'),
+    path('recommendations',         views.recommendations,  name='recommendations'),
+    path('likes',   views.likes,    name='likes'),
 
     path('items',                                       views.list_items,   name='items'),
     path('items/create',                                views.create_item,  name='items.create'),
@@ -40,4 +42,16 @@ urlpatterns = [
 
 
     path('api/', include(router.urls)),
+
+    path(
+        'api/recommender/<int:recommender_id>/users/<int:user_id>/items',
+        RecommenderUserPredictionsView.as_view(),
+        name='user_recommended_items'
+    ),
+
+    path(
+        'api/recommender/<int:recommender_id>/users/<int:user_id>/items/<int:item_id>/similar',
+        RecommenderItemPredictionsView.as_view(),
+        name='similar_items'
+    )
 ]
