@@ -1,4 +1,9 @@
-# UBA - Maestría en Explotación de Datos y Descubrimiento de Conocimiento - Sistemas de recomendación
+
+<p align="left">
+<b>University of Buenos Aires (UBA)</br>Master in Data Mining and Knowledge Discovery</b>
+</p>
+
+# Sistemas de recomendación
 
 
 Implementación de un sistema de recomendación end-to-end. Desde el scrapping de datos hasta la implementación de una aplicación y los algoritmos necesarios.
