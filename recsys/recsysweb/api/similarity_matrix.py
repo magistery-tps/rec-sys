@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from ..logger import get_logger
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 # Serializers define the API representation.
@@ -23,6 +24,7 @@ class SimilarityMatrixViewSet(viewsets.ModelViewSet):
 
     queryset = SimilarityMatrix.objects.all()
     serializer_class = SimilarityMatrixSerializer
+    filter_backends = [DjangoFilterBackend]
     filterset_fields = ['name', 'type', 'description', 'version']
 
 
@@ -30,11 +32,7 @@ class SimilarityMatrixViewSet(viewsets.ModelViewSet):
     def get_versions(self, request, matrix=None):
         logger = get_logger(self)
         logger.info(f'matrix: {matrix}')
-        versions = SimilarityMatrixCell \
-            .objects \
-            .filter(matrix__id=matrix) \
-            .values('version')  \
-            .distinct()
+        versions = SimilarityMatrixCell             .objects             .filter(matrix__id=matrix)             .values('version')              .distinct()
         logger.info(f'versions: {versions}')
         return Response(data=versions, status=status.HTTP_200_OK)
 

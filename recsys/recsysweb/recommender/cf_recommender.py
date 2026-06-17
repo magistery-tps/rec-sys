@@ -25,7 +25,7 @@ class CollaborativeFilteringRecommender(Recommender):
             id          = self.config.id,
             name        = f'recommender-{self.config.id}',
             features    = f'{self.config.name} | Similarity Matrix: {self.config.user_similarity_matrix.name}, {self.config.item_similarity_matrix.name}',
-            title       = 'Other users also are reading',
+            title       = 'Other users also watched',
             description = f"""<strong>Recommendation Strategy</strong><br>
                 Use a collaborative filtering recommendation strategy based on <strong>{self.config.name}</strong> model. 
                 This recommender find items rated for similar users. To use these recommenders it's important to have a minimum number of rated items by user. 
